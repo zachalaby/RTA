@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.MainController">
+   <children>
+      <HBox prefHeight="10.0" prefWidth="1200.0">
+         <children>
+            <MenuBar prefHeight="29.0" prefWidth="1251.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="sourceSelection" mnemonicParsing="false" text="Source Selection">
+                    <items>
+                        <Menu fx:id="sourceOneInput" mnemonicParsing="false" onShowing="#populateMenu" text="Source 1 Input">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Dummy" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="sourceTwoInput" mnemonicParsing="false" text="Source 2 Input">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Dummy" />
+                           </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <HBox layoutY="29.0" prefHeight="10.0" prefWidth="1200.0" />
+      <TabPane layoutY="29.0" prefHeight="691.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Combined">
+               <content>
+                  <AreaChart>
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+               </content>
+            </Tab>
+          <Tab text="Source 1" />
+            <Tab text="Source 2" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
